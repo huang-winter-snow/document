@@ -11,7 +11,12 @@
 ## printf
 
 * printf  format-string  [arguments...]
+
+* 使用%s时，在格式指示符中的转义字符能够被解析，而参数列表中的转义字符则不会被解析，但是若使用%b指示符，printf会解析格式指示符和参数列表中的转义字符,其后的参数列表需要用双引号
+
 * printf "%-10s %-8s %-4s\n"  姓名  性别  体重kg
+
+* printf "%b" "hello\tworld"  hello world·
 
 ## 输出控制 \033
 
