@@ -37,6 +37,7 @@
     gcc -E main.c ==== 预处理 
     gcc -S main.c ==== 只编译不汇编
     gcc -g main.c -o main_d ==== 可进行gdb调试
+    gcc -Dname='xinzhu' === 定义宏 define name 'xinzhu'
 
 
     gcc main.c -o main -I../path
