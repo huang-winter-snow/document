@@ -1,7 +1,7 @@
 ## show processlist
-![](../image/show-processlist.jpg)
+![](/image/show-processlist.jpg)
 
-#### kill pthread
+## kill pthread
 
 - kill 1; #杀掉ID为1的线程, 关闭连接
 - kill query 1; #杀掉正在执行的ID为1的线程, 不关闭连接
