@@ -11,7 +11,7 @@
 ## 内置环境变量
 
 * MAKECMDGOALS  变量记录了命令行参数指定的终极目标列表
-* 例: make hello world  $(MAKECMDHOALS) = hello world
+* 例: make hello world  $(MAKECMDGOALS) = hello world
 
 ## = ?= :=
 
@@ -33,11 +33,13 @@
 * $< 表示第一个依赖文件
 * $? 表示比目标还要新的依赖文件列表
 
+## 伪目标
+
 ## findstring
 
     $(findstring <find>,<in>) 
     
-    #函数功能: 在字串<in>中查找<find>字串
+    #函数功能: 在字符串<in>中查找<find>字符串
     #返回：如果找到，那么返回<find>，否则返回空字符串。
 
 ## filter

@@ -7,6 +7,7 @@
 
 * uname -m 打印机器硬件名称 例：x86_64
 * uname -s 打印操作系统名称 例：Darwin
+* uname -n 显示网络主机名称
 
 ## printf
 
@@ -26,24 +27,22 @@
 
 ```
 例：
-    printf("\033[31m This text is red \033[0m This text has default color\n")
-    printf("\033[31;43m This text is red with rellow background \033[0mThis text has default color \n")
+    printf "\033[31m This text is red \033[0m This text has default color\n"
+    printf "\033[31;43m This text is red with rellow background \033[0mThis text has default color \n"
 ```
 
-## 编译
+## head tail wc
+- head -n 1 1.txt 查看文件第一行
+- head -c 1 1.txt 查看文件第一个字节 注：不是字符
+- wc -l 1.txt 显示文本行数
+- wc -w 1.txt 显示文本单词个数
+- wc -c 1.txt 显示文本字节数
 
-```
-    gcc -c main.c ==== 编译不链接，生成.o目标文件
-    gcc -E main.c ==== 预处理 
-    gcc -S main.c ==== 只编译不汇编
-    gcc -g main.c -o main_d ==== 可进行gdb调试
-    gcc -Dname='xinzhu' === 定义宏 define name 'xinzhu'
-
-
-    gcc main.c -o main -I../path
-    gcc main.c -o main -I../path -L../path
-
-    gcc -I [大写字母i]寻找头文件目录 /usr/local/include 
-    gcc -L [大写字母l]寻找库文件 /usr/local/lib
-    gcc -l word [小写字母l], 寻找动态链接库文件libword.so
-```
+## $@ $$ $? $n 
+- $0 当前脚本名称
+- $n 传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是$1，第二个参数是$2
+- $# 参数个数
+- $@ 传递给脚本或函数的所有参数
+- $* 传递给脚本或函数的所有参数
+- $? 上个命令的退出状态，或函数的返回值
+- $\$ 当前Shell进程ID
