@@ -15,4 +15,22 @@
     gcc -l word [小写字母l], 寻找动态链接库文件libword.so
 ```
 
-## 静态库 动态库
+## 静态库 .a结尾
+```
+    # 创建.o目标文件
+    gcc -c test.c -o libtest.o
+    #创建libtest.a静态库
+    ar rcs libtest.a libtest.o
+    #链接静态库
+    gcc -o test main.c -ltest
+```
+
+## 动态库 .so结尾
+```
+    # 使用位置无关代码创建目标文件
+    gcc -c -fPIC test.c -o test.o
+    # 创建共享库libtest.so
+    gcc -shared -o libtest.so test.o
+    # 链接静态库
+    gcc -o test main.c -ltest
+```

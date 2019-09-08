@@ -78,3 +78,9 @@
     $(strip <string>)
     功能：去掉<string>字串中开头和结尾的空字符。
     返回：返回被去掉空格的字符串值
+
+## subst
+
+    $(subst search, replace, text)
+    功能: 查找text里的search, 用replace替换
+    返回: 替换后的字符串
