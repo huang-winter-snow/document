@@ -1,5 +1,5 @@
 ## show processlist
-![](/image/show-processlist.jpg)
+![](/IMAGE/show-processlist.jpg)
 
 ## kill pthread
 
