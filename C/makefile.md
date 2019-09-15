@@ -8,10 +8,11 @@
 - 6.根据依赖关系, 决定哪些目标要重新生成
 - 7.执行生成命令
 
-## 内置环境变量
+## 变量
 
 * MAKECMDGOALS  变量记录了命令行参数指定的终极目标列表
 * 例: make hello world  $(MAKECMDGOALS) = hello world
+* \$\${VAR} 展开对应shell变量${VAR}
 
 ## = ?= :=
 
