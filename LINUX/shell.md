@@ -55,3 +55,14 @@
     libselinux.so.1 => /lib64/libselinux.so.1 (0x00007f87e5459000)
     libcap.so.2 => /lib64/libcap.so.2 (0x00007f87e5254000)
 ```
+
+## 变量
+```
+    name="test.gif"
+    echo ${name%.*} #输出test
+    echo ${name#*.} #输出gif
+
+    name="prefix.test.gif"
+    echo ${name%%.*} #输出prefix
+    echo ${name##*.} #输出gif
+```
