@@ -8,3 +8,7 @@
 
 - select concat('kill ', id, ';') from information_schema.processlist where time > 10 #查询出时间大于10的线程, 复制查询结果，批量执行
 
+
+## order by 优化
+- 使用group by 聚合数据，对结果集不需要排序的，可以加上 order by null, 这样会减少filesort
+
