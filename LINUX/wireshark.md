@@ -3,6 +3,12 @@
 2. launchctl setenv SSLKEYLOGFILE ~/tls/sslkeylog.log 设置启动的应用读取环境变量
 3. Preferences -> Protocols -> SSl -> (Pre)-Master-Secret 添加sslkeylog文件
 
+### 语法说明
+- 类型 host net port
+- 方向 src dst
+- 协议 ether ip tcp http ftp
+- 协议->方向->类型
+
 ### capture filter
 - [not] primitive [and|or [not] primitive ...]
 - host 172.18.5.4 //捕获[源/目的]IP地址
@@ -15,3 +21,4 @@
 - host www.example.com and not port 80 and not port 25
 - tcp port 23 and host 10.0.0.5 //使用tcp协议, 端口号23, [源/目的]IP地址
 - tcp port 23 and not src host 10.0.0.5 
+- src host 192.168.1.1 && dst port 80 抓取源地址为192.168.1.1，目的端口为80
