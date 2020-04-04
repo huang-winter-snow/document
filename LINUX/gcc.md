@@ -1,7 +1,7 @@
 ## 编译
 
 ```
-    gcc -c main.c ==== 编译不链接，生成.o目标文件
+    gcc -c main.c ==== 只编译不链接，生成.o目标文件
     gcc -E main.c ==== 预处理 
     gcc -S main.c ==== 只编译不汇编
     gcc -g main.c -o main_d ==== 可进行gdb调试
@@ -9,6 +9,9 @@
 
     gcc main.c -o main -I../path
     gcc main.c -o main -I../path -L../path
+
+    gcc -Wall 显示所有警告信息
+    gcc -Werror 警告作为错误处理
 
     gcc -I [大写字母i]寻找头文件目录 /usr/local/include 
     gcc -L [大写字母l]寻找库文件 /usr/local/lib
