@@ -66,3 +66,7 @@
     echo ${name%%.*} #输出prefix
     echo ${name##*.} #输出gif
 ```
+## 查看内存使用量
+```
+top -l 1 | head -n 10 | grep PhysMem
+```
