@@ -6,12 +6,13 @@
 - -t --field-separator 指定列分隔符
 - -k [FStart[.CStart]][Modifier][,[FEnd[.CEnd]][Modifier]] 指定列排序
 
-#### 基础数据 test.txt
+## 基础数据 test.txt
 - google 110 5000
 - baidu  120 5000
 - ali    50  6000
 - qq     60  8000
 
+## example
 - sort -t '' -k 1 test.txt
 - sort -n -t '' -k 2 test.txt
 - sort -n -t '' -k 2 -k 3 test.txt
