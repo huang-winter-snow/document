@@ -12,3 +12,6 @@
 ## order by 优化
 - 使用group by 聚合数据，对结果集不需要排序的，可以加上 order by null, 这样会减少filesort
 
+## lock
+- show variables like ‘innodb_print_all_deadlocks’ ##查看死锁日志是否打开
+- SET GLOBAL innodb_print_all_deadlocks = 1; ##打开死锁日志
